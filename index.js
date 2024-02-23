@@ -46,21 +46,25 @@ app.use(express.static("public")) ;
 
 
 
-import { CronJob } from 'cron';
+// import { CronJob } from 'cron';
 
-const job = new CronJob(
-	'*/5 * * * *', // cronTime
-	function () {
-      fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => console.log(json))
-	}, // onTick
-	null, // onComplete
-	true, // start
-	'America/Los_Angeles' // timeZone
-);
+// const job = new CronJob(
+// 	'*/5 * * * *', // cronTime
+// 	function () {
+//       fetch('https://jsonplaceholder.typicode.com/todos/1')
+//       .then(response => response.json())
+//       .then(json => console.log(json))
+// 	}, // onTick
+// 	null, // onComplete
+// 	true, // start
+// 	'America/Los_Angeles' // timeZone
+// );
 
-
+setInterval(() => {
+   fetch('https://jsonplaceholder.typicode.com/todos/1')
+   .then(response => response.json())
+   .then(json => console.log(json))
+}, 600000);
 
 
 
