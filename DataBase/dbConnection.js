@@ -15,6 +15,16 @@ export const dbConnection = async ()=>{
    })
 }
 
+// //& Data Base Online Connection By Atlas :
+// export const dbConnection = async ()=>{
+//    await mongoose.connect(process.env.URL_CONNECTION_DB_ATLAS).then(()=>{
+//       console.log("dbConnect ...." );
+//    }).catch((error)=>{
+//       // console.log("Fail dbConnection ! " , error);
+//       console.log("Fail dbConnection ! " );
+//    })
+// }
+
 
 
 

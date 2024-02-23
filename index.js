@@ -23,7 +23,7 @@ const port = process.env.PORT || 5000 ;
 
 const MongoDBStore = mongoSession(session)
 const store = new MongoDBStore({
-   uri:process.env.URL_CONNECTION_DB_ONLINE_ATLAS ,
+   uri:process.env.URL_CONNECTION_DB_ATLAS ,
    collection: 'mySessions'
 });
 
@@ -49,7 +49,7 @@ app.use(express.static("public")) ;
 import { CronJob } from 'cron';
 
 const job = new CronJob(
-	'*/14 * * * *', // cronTime
+	'*/10 * * * *', // cronTime
 	function () {
       fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
