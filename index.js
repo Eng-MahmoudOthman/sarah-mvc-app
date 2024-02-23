@@ -49,7 +49,7 @@ app.use(express.static("public")) ;
 import { CronJob } from 'cron';
 
 const job = new CronJob(
-	'*/10 * * * *', // cronTime
+	'*/5 * * * *', // cronTime
 	function () {
       fetch('https://https://sarah-mvc-app.onrender.com/')
       .then(response => response.json())
