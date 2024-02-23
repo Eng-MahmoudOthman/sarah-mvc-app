@@ -51,7 +51,7 @@ import { CronJob } from 'cron';
 const job = new CronJob(
 	'*/10 * * * *', // cronTime
 	function () {
-      fetch('https://jsonplaceholder.typicode.com/todos/1')
+      fetch('https://https://sarah-mvc-app.onrender.com/')
       .then(response => response.json())
       .then(json => console.log(json))
 	}, // onTick
