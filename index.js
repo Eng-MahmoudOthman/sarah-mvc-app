@@ -23,7 +23,7 @@ const port = process.env.PORT || 5000 ;
 
 const MongoDBStore = mongoSession(session)
 const store = new MongoDBStore({
-   uri:process.env.URL_CONNECTION_DB_ATLAS ,
+   uri:process.env.URL_CONNECTION_DB_ONLINE_ATLAS ,
    collection: 'mySessions'
 });
 
